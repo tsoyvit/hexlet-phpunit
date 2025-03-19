@@ -1,6 +1,6 @@
 <?php
 
-namespace Hexlet\Phpunit\Tests;
+namespace Php\Package\Tests;
 
 use PHPUnit\Framework\TestCase;
 

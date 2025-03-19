@@ -1,9 +1,9 @@
 <?php
 
-namespace Hexlet\Phpunit\Utils;
+namespace Php\Package\Utils;
 
 // Эта функция переворачивает переданную строку
-function reverseString($string)
+function reverseString($string): string
 {
     return implode(array_reverse(str_split($string)));
 }
