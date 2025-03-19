@@ -4,7 +4,7 @@ namespace Php\Package\Tests;
 
 use PHPUnit\Framework\TestCase;
 
-use function Hexlet\Phpunit\Utils\reverseString;
+use function Php\Package\Utils\reverseString;
 
 // Класс UtilsTest наследует класс TestCase
 // Имя класса совпадает с именем файла
