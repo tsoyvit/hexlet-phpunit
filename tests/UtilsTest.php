@@ -5,7 +5,6 @@ namespace Php\Package\Tests;
 use PHPUnit\Framework\TestCase;
 
 use function Php\Package\Utils\reverseString;
-use function Psy\debug;
 
 // Класс UtilsTest наследует класс TestCase
 // Имя класса совпадает с именем файла
@@ -26,9 +25,13 @@ class UtilsTest extends TestCase
         $this->assertEquals($expectedOutput, reverseString($input));
     }
 
-    public function getFixtureContent(string $fixtureName): string
+    private function getFixtureContent(string $fixtureName): string
     {
-        $path = __DIR__ . "/fixtures/$fixtureName";
-        return trim(file_get_contents($path));
+        $path = __DIR__ . '/fixtures/' . $fixtureName;
+        $content = file_get_contents($path);
+        if ($content === false) {
+            throw new \RuntimeException("Не удалось прочитать файл: {$path}");
+        }
+        return trim($content);
     }
 }
